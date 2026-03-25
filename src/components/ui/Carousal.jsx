@@ -23,8 +23,6 @@ const Carousal = ({ items }) => {
 
     // }, [])
 
-    console.log(currIndex)
-
     return (
         <div className="flex flex-col gap-5 items-center mt-18">
             <ul className="w-full grid grid-cols-3 gap-15">

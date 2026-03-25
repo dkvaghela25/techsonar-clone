@@ -1,8 +1,11 @@
-const Title = ({ title }) => {
+const Title = ({ title, description }) => {
     return (
-        <div className="relative w-fit">
-            <h2 className="text-5xl font-semibold font-secondary">{title}</h2>
-            <img className="absolute right-0 -bottom-5" width={120} src="./images/highlight.svg" alt="" />
+        <div className="flex flex-col gap-8">
+            <div className="relative w-fit">
+                <h2 className="text-5xl font-semibold font-secondary">{title}</h2>
+                <img className="absolute right-0 -bottom-5" width={120} src="./images/highlight.svg" alt="" />
+            </div>
+            {description && <div className="text-lg text-center font-light">{description}</div>}
         </div>
     );
 };

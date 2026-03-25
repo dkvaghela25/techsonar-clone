@@ -1,5 +1,8 @@
+import FAQs from "../components/FAQs/FAQs";
 import Highlights from "../components/Highlights/Highlights";
+import PlansAndPricing from "../components/Plans/PlansAndPricing";
 import Reviews from "../components/Reviews/Reviews";
+import StartMonitoring from "../components/StartMonitoring/StartMonitoring";
 import WelcomeModal from "../components/WelcomeModal/WelcomeModal";
 import WhyTechSonar from "../components/WhyTechSonar/WhyTechSonar";
 
@@ -10,6 +13,9 @@ const HomePage = () => {
        <WhyTechSonar />
        <Highlights />
        <Reviews />
+       <FAQs />
+       <PlansAndPricing />
+       <StartMonitoring />
     </div>
   );
 };
