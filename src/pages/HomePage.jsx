@@ -8,7 +8,7 @@ import WhyTechSonar from "../components/WhyTechSonar/WhyTechSonar";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-25">
+    <div className="flex flex-col gap-25 max-sm:gap-10">
        <WelcomeModal />
        <WhyTechSonar />
        <Highlights />

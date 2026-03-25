@@ -4,14 +4,22 @@ import { FaCircle } from "react-icons/fa";
 
 const Carousal = ({ items }) => {
 
+    const totalDisplayItems = (() => {
+        if(window.innerWidth <= 450) {
+            return 1;
+        } else {
+            return 3;
+        }
+    })();
+
     const totalItems = items.length;
     const [displayItems, setDisplayItems] = useState([]);
     const [currIndex, setCurrIndex] = useState(0);
-    const indicators = Math.ceil(totalItems / 3);
+    const indicators = Math.ceil(totalItems / totalDisplayItems);
 
     useEffect(() => {
-        setDisplayItems(items.slice(currIndex, currIndex + 3))
-    }, [currIndex, items])
+        setDisplayItems(items.slice(currIndex, currIndex + totalDisplayItems))
+    }, [currIndex, items, totalDisplayItems])
 
     // useEffect(() => {
 
@@ -25,7 +33,7 @@ const Carousal = ({ items }) => {
 
     return (
         <div className="flex flex-col gap-5 items-center mt-18">
-            <ul className="w-full grid grid-cols-3 gap-15">
+            <ul className={`w-full grid grid-cols-${totalDisplayItems} gap-15`}>
                 {displayItems.map((item, index) => (
                     <Review key={index} review={item} />
                 ))}
@@ -33,7 +41,7 @@ const Carousal = ({ items }) => {
 
             <ul className="flex gap-2">
                 {Array.from({ length: indicators }).map((_, index) => (
-                    <FaCircle onClick={() => setCurrIndex(index)} className={`w-3 h-3 ${currIndex === index ? "text-primary-button-bg" : ""}`} key={index} />
+                    <FaCircle onClick={() => setCurrIndex(index)} className={`text-sm max-sm:text-xs ${currIndex === index ? "text-primary-button-bg" : ""}`} key={index} />
                 ))}
             </ul>
         </div>
