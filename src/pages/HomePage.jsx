@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import FAQs from "../components/FAQs/FAQs";
 import Highlights from "../components/Highlights/Highlights";
 import PlansAndPricing from "../components/Plans/PlansAndPricing";
@@ -8,7 +9,7 @@ import WhyTechSonar from "../components/WhyTechSonar/WhyTechSonar";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-25 max-sm:gap-10">
+    <div className="flex flex-col gap-25 max-lg:gap-10">
        <WelcomeModal />
        <WhyTechSonar />
        <Highlights />

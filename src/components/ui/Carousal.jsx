@@ -5,12 +5,16 @@ import { FaCircle } from "react-icons/fa";
 const Carousal = ({ items }) => {
 
     const totalDisplayItems = (() => {
-        if(window.innerWidth <= 450) {
+        if (window.innerWidth <= 450) {
             return 1;
+        } else if (window.innerWidth > 450 && window.innerWidth <= 1024) {
+            return 2;
         } else {
             return 3;
         }
     })();
+
+    console.log(totalDisplayItems)
 
     const totalItems = items.length;
     const [displayItems, setDisplayItems] = useState([]);
@@ -33,7 +37,7 @@ const Carousal = ({ items }) => {
 
     return (
         <div className="flex flex-col gap-5 items-center mt-18">
-            <ul className={`w-full grid grid-cols-${totalDisplayItems} gap-15`}>
+            <ul className={`w-full grid grid-cols-${totalDisplayItems} gap-15 sm:max-lg:gap-5`}>
                 {displayItems.map((item, index) => (
                     <Review key={index} review={item} />
                 ))}

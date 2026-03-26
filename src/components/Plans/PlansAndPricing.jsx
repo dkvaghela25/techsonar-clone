@@ -7,7 +7,7 @@ const PlansAndPricing = () => {
     const [selectedCycle, setSelectedCycle] = useState(billingCycles[0])
 
     return (
-        <div className="mx-10 max-sm:mx-0 flex flex-col gap-10 items-center">
+        <div className="mx-10 max-lg:mx-0 flex flex-col gap-10 items-center">
             <Title
                 title="Plans & pricing"
                 description="Straightforward, Fair Pricing"
@@ -23,7 +23,7 @@ const PlansAndPricing = () => {
                 ))}
             </ul>
 
-            <ul className="grid grid-cols-3 max-sm:grid-cols-1 gap-10 w-[90%]">
+            <ul className="grid grid-cols-3 max-lg:grid-cols-1 gap-10 w-[90%]">
                 {plans.map(plan => (
                     <Plan plan={plan} selectedCycle={selectedCycle} />
                 ))}

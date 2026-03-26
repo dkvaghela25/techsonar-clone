@@ -5,7 +5,7 @@ import Carousal from "../ui/Carousal";
 
 const Reviews = () => {
     return (
-        <div className="mx-10 max-sm:mx-0 flex flex-col items-center ">
+        <div className="mx-10 max-lg:mx-0 flex flex-col items-center ">
             <Title
                 title="TechSonar customers"
             />
