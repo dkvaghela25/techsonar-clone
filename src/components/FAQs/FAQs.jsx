@@ -2,6 +2,7 @@ import { useState } from "react";
 import { faqs } from "../../constants";
 import Title from "../ui/Title";
 import FAQ from "./FAQ";
+import FadeAnimation from "../ui/FadeAnimation";
 
 const FAQs = () => {
 
@@ -18,10 +19,12 @@ const FAQs = () => {
                 title="Frequently ask questions"
                 description="Show users your uptime history, response times, and current status."
             />
-            
+
             <ul className="w-full mt-20 max-lg:mt-10">
                 {faqs.map((faq, index) => (
-                    <FAQ key={index} faq={faq} displayId={displayId} handleToggle={handleToggle} />
+                    <FadeAnimation axes="Up" >
+                        <FAQ key={index} faq={faq} displayId={displayId} handleToggle={handleToggle} />
+                    </FadeAnimation>
                 ))}
             </ul>
         </div>

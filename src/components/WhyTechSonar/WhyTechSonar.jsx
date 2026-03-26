@@ -1,20 +1,22 @@
 import { reasons } from "../../constants";
 import Title from "../ui/Title";
 import Reason from "./Reason";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const WhyTechSonar = () => {
 
+  const width = useWindowWidth();
+  console.log(width)
+
   const gridCols = (() => {
-    if (window.innerWidth <= 450) {
+    if (width <= 600) {
       return "grid-cols-1";
-    } else if (window.innerWidth > 450 && window.innerWidth <= 1024) {
+    } else if (width > 600 && width <= 1024) {
       return "grid-cols-2";
     } else {
       return "grid-cols-4";
     }
   })();
-
-  console.log(gridCols)
 
   return (
     <div className="mx-8 max-lg:mx-0 flex flex-col items-center gap-15">

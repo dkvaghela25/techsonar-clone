@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import Review from "../Reviews/Review";
 import { FaCircle } from "react-icons/fa";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const Carousal = ({ items }) => {
 
+    const width = useWindowWidth();
+
     const totalDisplayItems = (() => {
-        if (window.innerWidth <= 450) {
+        if (width <= 600) {
             return 1;
-        } else if (window.innerWidth > 450 && window.innerWidth <= 1024) {
+        } else if (width > 600 && width <= 1024) {
             return 2;
         } else {
             return 3;
