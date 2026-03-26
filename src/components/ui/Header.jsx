@@ -10,7 +10,6 @@ const Header = () => {
         setIsVisible(!isVisible)
     }
 
-
     return (
         <div className="w-[90%] max-sm:w-full m-auto max-sm:m-0 p-5 flex items-center justify-between font-medium">
             <img className="w-45 max-sm:w-30" src="./images/logo.svg" alt="" />
@@ -28,11 +27,9 @@ const Header = () => {
                     <Link to="/">Pricing</Link>
                     <Link to="/">Contact</Link>
                 </div>
-                <button className="bg-primary-button-bg px-10 py-3 max-sm:px-5 max-sm:py-1.5 rounded-sm max-sm:w-fit" >Login</button>
+                <button className="bg-primary-button-bg px-10 py-3 max-xl:px-5 max-xl:py-1.5 rounded-sm max-xl:w-fit" >Login</button>
             </div>
-
-            <div className='cursor-pointer md:hidden' onClick={changeVisibility}><RxHamburgerMenu className='text-2xl' /></div>
-
+            <div className='cursor-pointer xl:hidden' onClick={changeVisibility}><RxHamburgerMenu className='text-2xl' /></div>
         </div>
     );
 };
