@@ -3,7 +3,7 @@ import { faqs } from "../../constants";
 import Title from "../ui/Title";
 import FAQ from "./FAQ";
 
-const FAQs = () => {
+const FAQs = ({ref}) => {
 
     const [displayId, setDisplayId] = useState(false);
 
@@ -12,7 +12,7 @@ const FAQs = () => {
     }
 
     return (
-        <div className="mx-10 max-lg:mx-0 flex flex-col items-center ">
+        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col items-center ">
 
             <Title
                 title="Frequently ask questions"

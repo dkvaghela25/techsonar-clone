@@ -21,7 +21,7 @@ export const reasons = [
     },
 ]
 
-export const highlights = [
+export const features = [
     {
         imgUrl: "./images/highlights/highlight_image_1.png",
         title: "Show real-time response and risk metrics",

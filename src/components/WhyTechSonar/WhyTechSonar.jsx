@@ -3,10 +3,9 @@ import Title from "../ui/Title";
 import Reason from "./Reason";
 import useWindowWidth from "../../hooks/useWindowWidth";
 
-const WhyTechSonar = () => {
+const WhyTechSonar = ({ref}) => {
 
   const width = useWindowWidth();
-  console.log(width)
 
   const gridCols = (() => {
     if (width <= 600) {
@@ -19,7 +18,7 @@ const WhyTechSonar = () => {
   })();
 
   return (
-    <div className="mx-8 max-lg:mx-0 flex flex-col items-center gap-15">
+    <div ref={ref} className="mx-8 max-lg:mx-0 flex flex-col items-center gap-15">
       <Title
         title="Why TechSonar?"
       />

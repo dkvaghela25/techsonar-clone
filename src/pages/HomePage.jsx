@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import FAQs from "../components/FAQs/FAQs";
-import Highlights from "../components/Highlights/Highlights";
+import Highlights from "../components/Features/Features";
 import PlansAndPricing from "../components/Plans/PlansAndPricing";
 import Reviews from "../components/Reviews/Reviews";
 import StartMonitoring from "../components/StartMonitoring/StartMonitoring";
@@ -9,12 +10,37 @@ import WhyTechSonar from "../components/WhyTechSonar/WhyTechSonar";
 
 const HomePage = () => {
 
-  const HomePageComponents = [<WelcomeModal />, <WhyTechSonar />, <Highlights />, <Reviews />, <FAQs />, <PlansAndPricing />, <StartMonitoring />]
+  const welcomeModalRef = useRef(null)
+  const whyTechSonarRef = useRef(null)
+  const featuresRef = useRef(null)
+  const reviewsRef = useRef(null)
+  const faqsRef = useRef(null)
+  const plansAndPricingRef = useRef(null)
+  const startMonitoringRef = useRef(null)
+
+  const references = {
+    // "Welcome" :welcomeModalRef,
+    "Why TechSonar" :whyTechSonarRef,
+    "Features": featuresRef,
+    "FAQ": faqsRef,
+    "Pricing": plansAndPricingRef,
+    "Contact": startMonitoringRef,
+  }
+
+  const HomePageComponents = [
+    <WelcomeModal ref={welcomeModalRef} references={references} />,
+    <WhyTechSonar ref={whyTechSonarRef} />,
+    <Highlights ref={featuresRef} />,
+    <Reviews ref={reviewsRef} />,
+    <FAQs ref={faqsRef} />,
+    <PlansAndPricing ref={plansAndPricingRef} />,
+    <StartMonitoring ref={startMonitoringRef} />
+  ]
 
   return (
     <div className="flex flex-col gap-25 max-lg:gap-10">
-      {HomePageComponents.map(component => (
-        <FadeAnimation axes="Up" >
+      {HomePageComponents.map((component, index) => (
+        <FadeAnimation key={index} axes="Up" >
           {component}
         </FadeAnimation>
       ))}

@@ -3,9 +3,9 @@ import { reviews } from "../../constants";
 import Title from "../ui/Title";
 import Carousal from "../ui/Carousal";
 
-const Reviews = () => {
+const Reviews = ({ref}) => {
     return (
-        <div className="mx-10 max-lg:mx-0 flex flex-col items-center ">
+        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col items-center ">
             <Title
                 title="TechSonar customers"
             />

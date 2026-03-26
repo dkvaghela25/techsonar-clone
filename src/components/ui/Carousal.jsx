@@ -17,8 +17,6 @@ const Carousal = ({ items }) => {
         }
     })();
 
-    console.log(totalDisplayItems)
-
     const totalItems = items.length;
     const [displayItems, setDisplayItems] = useState([]);
     const [currIndex, setCurrIndex] = useState(0);

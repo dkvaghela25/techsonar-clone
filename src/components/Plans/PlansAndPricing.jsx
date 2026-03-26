@@ -3,11 +3,11 @@ import { billingCycles, plans } from "../../constants";
 import Title from "../ui/Title";
 import Plan from "./Plan";
 
-const PlansAndPricing = () => {
+const PlansAndPricing = ({ ref }) => {
     const [selectedCycle, setSelectedCycle] = useState(billingCycles[0])
 
     return (
-        <div className="mx-10 max-lg:mx-0 flex flex-col gap-10 items-center">
+        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col gap-10 items-center">
             <Title
                 title="Plans & pricing"
                 description="Straightforward, Fair Pricing"
