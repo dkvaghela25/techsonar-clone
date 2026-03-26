@@ -77,7 +77,3 @@
 .animate-fadeRight {
   animation: fadeRight 0.8s ease-out forwards;
 }
-
-.reveal-on-scroll {
-  opacity: 0;
-}

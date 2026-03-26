@@ -23,7 +23,7 @@ const FadeAnimation = ({ axes ,children }) => {
   return (
     <div
       ref={domRef}
-      className={`reveal-on-scroll ${isVisible ? `animate-fade${axes}` : 'opacity-0'}`}
+      className={`${isVisible ? `animate-fade${axes}` : 'opacity-0'}`}
     >
       {children}
     </div>

@@ -2,18 +2,30 @@ import { SlPlus } from "react-icons/sl";
 
 const FAQ = ({ faq, displayId, handleToggle }) => {
     const { que, ans, queId } = faq;
+    const isActive = displayId === queId;
 
     return (
-        <li className={`w-full p-10 max-lg:p-5 border-b first:border-t text-2xl 
-            ${displayId === queId ? "bg-secondary-bg/10 backdrop-blur-md border-b-0 rounded-b-[10px]" : ""}
+        <li className={`w-full p-10 max-lg:p-5 text-2xl transition-colors duration-300
+            ${isActive 
+                ? "bg-secondary-bg/20 backdrop-blur-md rounded-[10px]" 
+                : "border-b first:border-t border-white/40"
+            }
         `}>
             <div className="flex items-center justify-between cursor-pointer" onClick={() => handleToggle(queId)}>
                 <div className="max-lg:text-lg max-lg:font-normal max-lg:w-[85%]" >{que}</div>
-                <SlPlus className={`text-4xl max-lg:text-2xl transition delay-25 ${displayId === queId ? "rotate-45" : ""}`} />
+                <SlPlus className={`text-4xl max-lg:text-2xl transition-transform duration-300 ${isActive ? "rotate-45" : ""}`} />
             </div>
-            {displayId === queId && <div className={`mt-12 text-xl font-light`}>{ans}</div>}
+            <div
+                className={`text-xl font-light overflow-hidden transition-all duration-500 ease-in-out
+                        ${isActive
+                        ? "mt-12 max-h-125 opacity-100 visible"
+                        : "max-h-0 opacity-0 invisible"}
+                        `}
+            >
+                {ans}
+            </div>
         </li>
     );
 };
 
-export default FAQ
+export default FAQ;
