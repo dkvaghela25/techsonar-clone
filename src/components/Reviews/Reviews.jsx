@@ -1,7 +1,7 @@
 
 import { reviews } from "../../constants";
 import Title from "../ui/Title";
-import Carousal from "../ui/Carousal";
+import Carousel from "../ui/Carousel";
 
 const Reviews = ({ref}) => {
     return (
@@ -9,7 +9,7 @@ const Reviews = ({ref}) => {
             <Title
                 title="TechSonar customers"
             />
-            <Carousal items={reviews} />
+            <Carousel items={reviews} />
         </div>
     );
 };
