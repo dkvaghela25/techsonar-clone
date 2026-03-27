@@ -11,7 +11,7 @@ const StartMonitoring = ({ ref }) => {
             <button className="py-2 px-6 rounded-md bg-primary-button-bg text-secondary-text text-lg">Start Free Monitoring</button>
 
             <div className="flex items-center gap-5 max-lg:gap-3 text-xl max-lg:text-[16px]">
-                <img src="./images/img_group_512717.svg" alt="" />
+                <img src="./images/favicon.svg" alt="" />
                 <div className="">No credit card required. Cancel anytime.</div>
             </div>
         </div>
