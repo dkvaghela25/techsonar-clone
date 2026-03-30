@@ -10,7 +10,7 @@ const Plan = ({ plan, selectedCycle }) => {
         <li className={`flex flex-col gap-6 max-lg:gap-3 bg-secondary-bg/10 backdrop-blur-md rounded-lg p-10 max-lg:p-5 lg:max-xl:p-8 transition duration-300 hover:scale-102 relative overflow-hidden ${isPopular ? "scale-105 hover:scale-108 border border-secondary-border shadow-md shadow-secondary-border" : ""}`}>
             <div className="flex items-baseline justify-between gap-4 max-lg:gap-1 font-medium">
                 <div className="text-xl max-lg:text-lg">{name}</div>
-                {isPopular && <div className="px-4 py-1 rounded-full border border-secondary-border text-lg text-primary-button-bg max-lg:text-sm">Popular</div>}
+                {isPopular && <div className="px-3 py-0.5 rounded-full border border-secondary-border text-[15px] text-primary-button-bg max-xl:text-sm">Popular</div>}
             </div>
             <div className="flex items-baseline gap-4 max-lg:gap-1">
                 <div className="text-5xl font-semibold max-lg:text-4xl">$ {price}</div>

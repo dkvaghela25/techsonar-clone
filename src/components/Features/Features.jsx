@@ -13,7 +13,7 @@ const Features = ({ ref }) => {
                     description="Show users your uptime history, response times, and current status."
                 />
 
-                <ul className="flex flex-col gap-25 max-lg:gap-13">
+                <ul className="flex flex-col gap-20 max-lg:gap-13 mt-10">
                     {features.map((highlight, index) => (
                         <Feature key={index} highlight={highlight} index={index} />
                     ))}
