@@ -28,7 +28,7 @@ const PlansAndPricing = ({ ref }) => {
 
             <ul className="grid grid-cols-3 max-lg:grid-cols-1 gap-10 w-[90%] lg:max-xl:w-full lg:max-xl:gap-8">
                 {plans.map(plan => (
-                    <Plan plan={plan} selectedCycle={selectedCycle} />
+                    <Plan key={plan.id} plan={plan} selectedCycle={selectedCycle} />
                 ))}
             </ul>
 

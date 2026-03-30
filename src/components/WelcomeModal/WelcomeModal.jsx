@@ -8,7 +8,7 @@ const WelcomeModal = ({ ref, references }) => {
     const width = useWindowWidth();
 
     return (
-        <div ref={ref} className="relative w-full h-fit ">
+        <div ref={ref} className="relative w-full h-fit">
             <div className={`${width > 1600 ? "w-screen -mx-120 px-10" : ""}`}>
                 <div className="bg-linear-to-b from-gradient-start to-gradient-end w-full rounded-2xl h-265 max-md:h-130 md:max-lg:h-160 lg:max-xl:h-230 max-lg:px-1.5">
                     <Header references={references} />

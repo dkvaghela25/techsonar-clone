@@ -12,7 +12,7 @@ const App = () => {
         {
           path: "/",
           element: <HomePage />
-        }
+        },
       ]
     }
   ])
@@ -23,3 +23,4 @@ const App = () => {
 };
 
 export default App;
+

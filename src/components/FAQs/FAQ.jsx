@@ -23,7 +23,7 @@ const FAQ = ({ faq, displayId, handleToggle }) => {
                         `}
             >
                 {ans}
-                <div class="absolute bottom-0 right-0 w-32 h-24 bg-primary-button-bg/50 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-24 bg-primary-button-bg/50 rounded-full blur-3xl"></div>
             </div>
 
         </li>
