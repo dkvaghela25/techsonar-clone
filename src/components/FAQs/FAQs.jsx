@@ -3,7 +3,7 @@ import { faqs } from "../../constants";
 import Title from "../ui/Title";
 import FAQ from "./FAQ";
 
-const FAQs = ({ref}) => {
+const FAQs = ({ ref }) => {
 
     const [displayId, setDisplayId] = useState(false);
 
@@ -12,18 +12,20 @@ const FAQs = ({ref}) => {
     }
 
     return (
-        <div ref={ref} className="mx-10 md:max-lg:mx-2 max-lg:mx-0 flex flex-col items-center ">
+        <div className="w-full px-15 max-md:px-5">
+            <div ref={ref} className=" flex flex-col items-center w-full max-w-400 mx-auto">
 
-            <Title
-                title="Frequently ask questions"
-                description="Show users your uptime history, response times, and current status."
-            />
+                <Title
+                    title="Frequently ask questions"
+                    description="Show users your uptime history, response times, and current status."
+                />
 
-            <ul className="w-full mt-20 max-lg:mt-10">
-                {faqs.map((faq, index) => (
+                <ul className="w-full mt-20 max-lg:mt-10">
+                    {faqs.map((faq, index) => (
                         <FAQ key={index} faq={faq} displayId={displayId} handleToggle={handleToggle} />
-                ))}
-            </ul>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };

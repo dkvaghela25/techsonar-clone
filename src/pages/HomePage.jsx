@@ -37,7 +37,7 @@ const HomePage = () => {
   ]
 
   return (
-    <div className="flex max-w-400 flex-col gap-25 max-lg:gap-10">
+    <div className="w-full flex flex-col gap-25 max-lg:gap-10">
       <WelcomeModal ref={welcomeModalRef} references={references} />
       {HomePageComponents.map((component, index) => (
         <FadeAnimation key={index} axes="Up" >

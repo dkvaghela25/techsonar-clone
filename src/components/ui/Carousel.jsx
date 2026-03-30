@@ -21,7 +21,7 @@ const Carousel = ({ items }) => {
     }, [indicators]);
 
     return (
-        <div className="w-[90vw] max-w-full">
+        <div className="w-[90vw] max-w-400">
             <div className="flex flex-col gap-5 items-center mt-18 overflow-hidden">
                 <div className="w-full">
                     <div

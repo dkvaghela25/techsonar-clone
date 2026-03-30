@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="relative w-full">
 
-            <footer className="max-w-400 mx-auto w-full px-10 max-md:px-0">
+            <footer className="max-w-400 mx-auto px-15 max-md:px-5 w-full">
                 <div className="w-full grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-5">
 
                     <div className="w-[80%] max-lg:w-full">
@@ -41,8 +41,8 @@ const Footer = () => {
             </footer>
 
             <div className="w-full">
-                <img className="-mb-5 -ml-15 absolute bottom-0 left-0" src="./images/shadows/image-shadow1footer.svg" alt="" />
-                <img className="-mb-5  absolute bottom-0 right-0" src="./images/shadows/image-shadow2footer.svg" alt="" />
+                <img className="-ml-15 absolute bottom-0 left-0" src="./images/shadows/image-shadow1footer.svg" alt="" />
+                <img className="absolute bottom-0 right-0" src="./images/shadows/image-shadow2footer.svg" alt="" />
             </div>
         </div>
     );

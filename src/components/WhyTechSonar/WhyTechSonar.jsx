@@ -18,7 +18,7 @@ const WhyTechSonar = ({ref}) => {
   })();
 
   return (
-    <div ref={ref} className="mx-10 max-md:mx-0 md:max-lg:mx-2 flex flex-col items-center gap-15">
+    <div ref={ref} className="max-w-400 mx-auto px-15 max-md:px-5 flex flex-col items-center gap-15">
       <Title
         title="Why TechSonar?"
       />

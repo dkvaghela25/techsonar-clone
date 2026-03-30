@@ -1,13 +1,11 @@
 import Title from "../ui/Title";
 import { features } from "../../constants"
 import Feature from "./Feature";
-import useWindowWidth from "../../hooks/useWindowWidth";
 
 const Features = ({ ref }) => {
-    const width = useWindowWidth();
     return (
-        <div ref={ref} className={`px-15 py-20 max-lg:px-5 max-lg:py-10 -mx-5 max-md:-mx-3 flex flex-col items-center gap-15 bg-highlights-bg ${width > 1600 ? "w-screen left-0" : ""}`}>
-            <div className="max-w-400">
+        <div ref={ref} className={`w-full px-15 py-20 max-lg:py-10 max-md:px-5 bg-highlights-bg`}>
+            <div className="max-w-400 mx-auto flex flex-col items-center gap-15">
                 <Title
                     title="Build Trust With a Status"
                     description="Show users your uptime history, response times, and current status."
