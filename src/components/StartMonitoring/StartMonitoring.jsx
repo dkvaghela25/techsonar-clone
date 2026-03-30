@@ -2,7 +2,7 @@ import Title from "../ui/Title";
 
 const StartMonitoring = ({ ref }) => {
     return (
-        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col gap-10 items-center py-30 max-lg:py-15">
+        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col gap-10 items-center pb-30 max-lg:pb-15">
             <Title
                 title="Start monitoring your website in 30 seconds"
                 description="Join 5,000+ users keeping their websites online with TechSonar."
