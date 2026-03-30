@@ -19,7 +19,6 @@ const HomePage = () => {
   const startMonitoringRef = useRef(null)
 
   const references = {
-    // "Welcome" :welcomeModalRef,
     "Why TechSonar": whyTechSonarRef,
     "Features": featuresRef,
     "FAQ": faqsRef,

@@ -1,22 +1,29 @@
 import { useEffect, useRef, useState } from 'react';
 
-const FadeAnimation = ({ axes ,children }) => {
-    
+const FadeAnimation = ({ axes, children }) => {
+
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
+  const callBackFunction = (entries, observer) => {
+    console.log(entries);
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.unobserve(domRef.current);
+      }
+    });
+  }
+
+  const options = { threshold: 0.1 }
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(domRef.current);
-        }
-      });
-    }, { threshold: 0.1 });
+
+    const observer = new IntersectionObserver(callBackFunction, options);
 
     observer.observe(domRef.current);
-    
+
     return () => observer.disconnect();
   }, []);
 
