@@ -12,7 +12,7 @@ const FAQs = ({ref}) => {
     }
 
     return (
-        <div ref={ref} className="mx-10 max-lg:mx-0 flex flex-col items-center ">
+        <div ref={ref} className="mx-10 md:max-lg:mx-2 max-lg:mx-0 flex flex-col items-center ">
 
             <Title
                 title="Frequently ask questions"

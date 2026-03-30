@@ -4,7 +4,7 @@ import Feature from "./Feature";
 
 const Features = ({ref}) => {
     return (
-        <div ref={ref} className="px-15 py-20 max-lg:px-5 max-lg:py-10 -mx-5 max-lg:mx-0 flex flex-col items-center gap-15 bg-highlights-bg">
+        <div ref={ref} className="px-15 py-20 max-lg:px-5 max-lg:py-10 -mx-5 max-md:-mx-3 flex flex-col items-center gap-15 bg-highlights-bg">
             
             <Title
                 title="Build Trust With a Status"

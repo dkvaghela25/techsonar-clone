@@ -7,7 +7,7 @@ import FadeAnimation from "../ui/FadeAnimation";
 const FloatingDashboard = () => {
     return (
         <FadeAnimation axes="Up" >
-            <div className="sm:relative -top-112.5 -mb-112.5 max-sm:mb-0  max-sm:mx-0 sm:max-lg:-top-65 sm:max-lg:-mb-65 max-sm:my-4 m-9 rounded-lg overflow-hidden">
+            <div className="md:relative md:max-lg:mx-2 -top-112.5 -mb-112.5 max-sm:mb-0  max-sm:mx-0 sm:max-lg:-top-65 sm:max-lg:-mb-65 max-sm:my-4 m-9 rounded-lg overflow-hidden">
                 <div className="bg-primary-bg flex justify-between px-6 py-3 max-sm:px-3 max-sm:py-1.5 items-center">
                     <div className="flex gap-2 max-sm:gap-1">
                         <FaCircle className="text-ios-close max-sm:text-xs" />

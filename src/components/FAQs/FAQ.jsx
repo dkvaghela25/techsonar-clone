@@ -5,9 +5,9 @@ const FAQ = ({ faq, displayId, handleToggle }) => {
     const isActive = displayId === queId;
 
     return (
-        <li className={`w-full p-10 max-lg:p-5 text-2xl transition-colors duration-300
-            ${isActive 
-                ? "bg-secondary-bg/20 backdrop-blur-md rounded-[10px]" 
+        <li className={`w-full p-10 max-lg:p-5 text-2xl transition-colors duration-300 relative overflow-hidden
+            ${isActive
+                ? "bg-secondary-bg/20 backdrop-blur-md rounded-[10px]"
                 : "border-b first:border-t border-white/40"
             }
         `}>
@@ -23,7 +23,9 @@ const FAQ = ({ faq, displayId, handleToggle }) => {
                         `}
             >
                 {ans}
+                <div class="absolute bottom-0 right-0 w-32 h-24 bg-primary-button-bg/50 rounded-full blur-3xl"></div>
             </div>
+
         </li>
     );
 };

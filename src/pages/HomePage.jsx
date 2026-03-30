@@ -20,7 +20,7 @@ const HomePage = () => {
 
   const references = {
     // "Welcome" :welcomeModalRef,
-    "Why TechSonar" :whyTechSonarRef,
+    "Why TechSonar": whyTechSonarRef,
     "Features": featuresRef,
     "FAQ": faqsRef,
     "Pricing": plansAndPricingRef,
@@ -28,7 +28,6 @@ const HomePage = () => {
   }
 
   const HomePageComponents = [
-    <WelcomeModal ref={welcomeModalRef} references={references} />,
     <WhyTechSonar ref={whyTechSonarRef} />,
     <Highlights ref={featuresRef} />,
     <Reviews ref={reviewsRef} />,
@@ -39,6 +38,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col gap-25 max-lg:gap-10">
+      <WelcomeModal ref={welcomeModalRef} references={references} />
       {HomePageComponents.map((component, index) => (
         <FadeAnimation key={index} axes="Up" >
           {component}

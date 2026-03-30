@@ -2,41 +2,49 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="w-full px-10">
+        <div className="relative w-full">
 
-            <div className="w-full grid grid-cols-[2fr_1fr_1fr] max-lg:grid-cols-1 max-lg:gap-5">
-                
-                <div className="w-[80%] max-lg:w-full">
-                    <img src="./images/logo.svg" alt="" />
-                    <p className="mt-6 text-lg font-normal">Why Techsonar? Techsonar is one of the most popular website monitoring services in the world.</p>
-                </div>
+            <footer className=" w-full px-10 max-md:px-0">
+                <div className="w-full grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-5">
 
-                <div>
-                    <div className="text-lg font-bold">Links</div>
-                    <div className="flex flex-col gap-2 mt-4 font-light">
-                        <Link to="/">Why TechSonar</Link>
-                        <Link to="/">Faq</Link>
-                        <Link to="/">Pricing</Link>
-                        <Link to="/">Contact</Link>
-                        <Link to="/">Features</Link>
+                    <div className="w-[80%] max-lg:w-full">
+                        <img src="./images/logo.svg" alt="" />
+                        <p className="mt-6 text-lg font-normal">Why Techsonar? Techsonar is one of the most popular website monitoring services in the world.</p>
                     </div>
-                </div>
 
-                <div>
-                    <div className="text-lg font-bold">Resources</div>
-                    <div className="flex flex-col gap-2 mt-4 font-light">
-                        <Link to="/">API Docs</Link>
-                        <Link to="/">Webhook Setup</Link>
-                        <Link to="/">Blog</Link>
-                        <Link to="/">Uptime Tools</Link>
+                    <div className="w-full grid grid-cols-2 gap-5 max-md:grid-cols-1">
+                        <div>
+                            <div className="text-lg font-bold">Links</div>
+                            <div className="flex flex-col gap-2 mt-4 font-light">
+                                <Link to="/">Why TechSonar</Link>
+                                <Link to="/">Faq</Link>
+                                <Link to="/">Pricing</Link>
+                                <Link to="/">Contact</Link>
+                                <Link to="/">Features</Link>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="text-lg font-bold">Resources</div>
+                            <div className="flex flex-col gap-2 mt-4 font-light">
+                                <Link to="/">API Docs</Link>
+                                <Link to="/">Webhook Setup</Link>
+                                <Link to="/">Blog</Link>
+                                <Link to="/">Uptime Tools</Link>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
+                <div className="text-center p-10 font-light max-lg:p-0 max-lg:py-10">© 2025 TechSonar. All Rights Reserved.</div>
+            </footer>
+
+            <div className="w-full">
+                <img className="-mb-5 -ml-15 absolute bottom-0 left-0" src="./images/shadows/image-shadow1footer.svg" alt="" />
+                <img className="-mb-5  absolute bottom-0 right-0" src="./images/shadows/image-shadow2footer.svg" alt="" />
             </div>
-
-            <div className="text-center p-10 font-light max-lg:p-0 max-lg:py-10">© 2025 TechSonar. All Rights Reserved.</div>
-
-        </footer>
+        </div>
     );
 };
 
