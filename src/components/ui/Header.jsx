@@ -33,8 +33,8 @@ const Header = ({ references }) => {
                     <li key={key} onClick={() => scrollToSection(value)} className="cursor-pointer">{key}</li>
                 ))}
 
-                <li className="cursor-pointer">
-                    <button className="lg:hidden bg-primary-button-bg px-10 py-3 max-xl:px-5 max-xl:py-1.5 rounded-sm max-xl:w-fit" >Login</button>
+                <li className="lg:hidden cursor-pointer">
+                    <button className="bg-primary-button-bg px-10 py-3 max-xl:px-5 max-xl:py-1.5 rounded-sm max-xl:w-fit" >Login</button>
                 </li>
             </ul>
 

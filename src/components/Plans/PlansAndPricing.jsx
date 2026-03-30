@@ -2,12 +2,15 @@ import { useState } from "react";
 import { billingCycles, plans } from "../../constants";
 import Title from "../ui/Title";
 import Plan from "./Plan";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const PlansAndPricing = ({ ref }) => {
     const [selectedCycle, setSelectedCycle] = useState(billingCycles[0])
+    const width = useWindowWidth();
 
     return (
-        <div ref={ref} className="  mx-auto lg:max-xl:px-5 max-lg:px-0 flex flex-col gap-10 items-center">
+        <div className={`relative ${ width > 1600 ? "w-screen -mx-120" : ""}`}>
+            <div ref={ref} className="max-w-400  mx-auto lg:max-xl:px-5 max-lg:px-0 flex flex-col gap-10 items-center">
             <Title
                 title="Plans & pricing"
                 description="Straightforward, Fair Pricing"
@@ -30,9 +33,10 @@ const PlansAndPricing = ({ ref }) => {
             </ul>
 
             <div className="-z-10 w-full">
-                <img className="absolute top-0 left-0 " src="./images/shadows/image-shadow1pricing.png" alt="" />
-                <img className="absolute bottom-0 right-0" src="./images/shadows/image-shadow2pricing.svg" alt="" />
+                <img className="absolute -ml-5 top-0 left-0 " src="./images/shadows/image-shadow1pricing.png" alt="" />
+                <img className="absolute -mr-5 bottom-0 right-0" src="./images/shadows/image-shadow2pricing.svg" alt="" />
             </div>
+        </div>
         </div>
     );
 };

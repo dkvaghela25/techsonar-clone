@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="relative w-full">
 
-            <footer className=" w-full px-10 max-md:px-0">
+            <footer className="max-w-400 mx-auto w-full px-10 max-md:px-0">
                 <div className="w-full grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-5">
 
                     <div className="w-[80%] max-lg:w-full">
@@ -12,7 +12,7 @@ const Footer = () => {
                         <p className="mt-6 text-lg font-normal">Why Techsonar? Techsonar is one of the most popular website monitoring services in the world.</p>
                     </div>
 
-                    <div className="w-full grid grid-cols-2 gap-5 max-md:grid-cols-1">
+                    <div className="w-full grid grid-cols-2 gap-5">
                         <div>
                             <div className="text-lg font-bold">Links</div>
                             <div className="flex flex-col gap-2 mt-4 font-light">
